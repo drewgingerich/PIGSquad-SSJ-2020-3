@@ -18,7 +18,17 @@ public class PlayerController : MonoBehaviour
 
 	public void OnInteract(InputAction.CallbackContext ctx)
 	{
-		interact = true;
+		if (ctx.phase != InputActionPhase.Performed) return;
+
+		var ray = Camera.main.ScreenPointToRay(mousePosition);
+		var hit = Physics2D.GetRayIntersection(ray);
+		Debug.Log(hit);
+		if (hit.collider == null) return;
+
+		var interactable = hit.collider.gameObject.GetComponent<Interactable>();
+		if (interactable == null) return;
+
+		interactable.HandleInteract(hit.point);
 	}
 
 	public void OnTurn(InputAction.CallbackContext ctx)
