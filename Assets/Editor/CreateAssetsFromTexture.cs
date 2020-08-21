@@ -29,7 +29,7 @@ public static class CreateAssetsFromTexture
 			AssetDatabase.StartAssetEditing();
 			foreach (var tex in textures)
 			{
-				var texPath = AssetDatabase.GetAssetPath(Selection.activeObject);
+				var texPath = AssetDatabase.GetAssetPath(tex);
 
 				var matPath = Path.ChangeExtension(texPath, "mat");
 				Material mat = null;
