@@ -8,6 +8,7 @@ using UnityEditor;
 public static class CreateAssetsFromTexture
 {
 	private const string shaderName = "Universal Render Pipeline/Simple Lit";
+	private const string referenceMatPath = "Assets/General/Reference Material.mat";
 
 	[MenuItem("Assets/Create/Assets From Texture", false, 0)]
 	public static void Test()
@@ -30,7 +31,6 @@ public static class CreateAssetsFromTexture
 			{
 				var texPath = AssetDatabase.GetAssetPath(Selection.activeObject);
 
-
 				var matPath = Path.ChangeExtension(texPath, "mat");
 				Material mat = null;
 				if (File.Exists(matPath))
@@ -39,10 +39,10 @@ public static class CreateAssetsFromTexture
 				}
 				else
 				{
-					mat = new Material(shader);
+					var referenceMat = (Material)AssetDatabase.LoadAssetAtPath(referenceMatPath, typeof(Material));
+					mat = new Material(referenceMat);
 					AssetDatabase.CreateAsset(mat, matPath);
 				}
-				mat.SetInt("_Surface", 1);
 				mat.SetTexture("_BaseMap", tex);
 
 
@@ -58,6 +58,9 @@ public static class CreateAssetsFromTexture
 				}
 
 				prefab.GetComponent<MeshRenderer>().material = mat;
+				var sizer = prefab.GetComponent<SizeToTexture>();
+				if (sizer == null) sizer = prefab.AddComponent<SizeToTexture>();
+				sizer.texture = tex;
 
 				if (File.Exists(prefabPath))
 				{
@@ -65,7 +68,8 @@ public static class CreateAssetsFromTexture
 				}
 				else
 				{
-					prefab = PrefabUtility.SaveAsPrefabAsset(prefab, prefabPath);
+					PrefabUtility.SaveAsPrefabAsset(prefab, prefabPath);
+					GameObject.DestroyImmediate(prefab);
 				}
 
 			}
