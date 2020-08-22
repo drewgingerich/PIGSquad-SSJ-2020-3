@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4013306802560718666}
   - component: {fileID: 8072636225591390872}
   - component: {fileID: 5029843094077073489}
+  - component: {fileID: -4853038289980294179}
   m_Layer: 0
   m_Name: Floor_Tile
   m_TagString: Untagged
@@ -94,3 +95,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-4853038289980294179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7331174537651595984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618be9a1a743348d48f7e460c2dfe09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xTilesPerUnit: 0.1
+  yTilesPerUnit: 0.1
