@@ -8,7 +8,8 @@ using UnityEditor;
 public static class CreateAssetsFromTexture
 {
 	private const string shaderName = "Universal Render Pipeline/Simple Lit";
-	private const string referenceMatPath = "Assets/General/Reference Material.mat";
+	private const string referenceMatPath = "Assets/Objects/Reference Material.mat";
+	private const string referencePrefabPath = "Assets/Objects/Reference Prefab.prefab";
 
 	[MenuItem("Assets/Create/Assets From Texture", false, 0)]
 	public static void Test()
@@ -54,13 +55,18 @@ public static class CreateAssetsFromTexture
 				}
 				else
 				{
-					prefab = GameObject.CreatePrimitive(PrimitiveType.Quad);
+					var referencePrefab = (GameObject)AssetDatabase.LoadAssetAtPath(referencePrefabPath, typeof(GameObject));
+					prefab = (GameObject)PrefabUtility.InstantiatePrefab(referencePrefab);
 				}
 
-				prefab.GetComponent<MeshRenderer>().material = mat;
-				var sizer = prefab.GetComponent<SizeToTexture>();
-				if (sizer == null) sizer = prefab.AddComponent<SizeToTexture>();
+				var child = prefab.transform.GetChild(0).gameObject;
+				child.GetComponent<MeshRenderer>().material = mat;
+
+				var sizer = child.GetComponent<SizeToTexture>();
 				sizer.texture = tex;
+
+				var aligner = child.GetComponent<AlignToTextureBottom>();
+				aligner.texture = tex;
 
 				if (File.Exists(prefabPath))
 				{
