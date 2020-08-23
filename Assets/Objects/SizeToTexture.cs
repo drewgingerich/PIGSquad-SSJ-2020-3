@@ -8,10 +8,17 @@ public class SizeToTexture : MonoBehaviour
 	public int pixPerUnit = 200;
 	public Texture2D texture;
 
-	void OnEnable()
+	public void Awake()
 	{
 		SetSize();
 	}
+
+#if UNITY_EDITOR
+	public void Update()
+	{
+		SetSize();
+	}
+#endif
 
 	private void SetSize()
 	{
