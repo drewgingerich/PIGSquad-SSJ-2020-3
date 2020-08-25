@@ -62,10 +62,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3033750094450793724, guid: 0fa07af3c0d844404bd9379f4622de6f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033750094450793724, guid: 0fa07af3c0d844404bd9379f4622de6f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033750094450793724, guid: 0fa07af3c0d844404bd9379f4622de6f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4060146659165530115, guid: 0fa07af3c0d844404bd9379f4622de6f,
         type: 3}
       propertyPath: m_Name
-      value: Reference Prefab
+      value: Mirrors Concept
       objectReference: {fileID: 0}
     - target: {fileID: 5008063796670976974, guid: 0fa07af3c0d844404bd9379f4622de6f,
         type: 3}
@@ -77,6 +92,11 @@ PrefabInstance:
       propertyPath: texture
       value: 
       objectReference: {fileID: 2800000, guid: a31e79ce486624dd39aacf2479acb1f5, type: 3}
+    - target: {fileID: 5332600248476576157, guid: 0fa07af3c0d844404bd9379f4622de6f,
+        type: 3}
+      propertyPath: pixPerUnit
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6143429188583142042, guid: 0fa07af3c0d844404bd9379f4622de6f,
         type: 3}
       propertyPath: texture

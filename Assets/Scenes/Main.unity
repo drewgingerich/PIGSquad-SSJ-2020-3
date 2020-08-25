@@ -438,6 +438,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 52229747}
+    - target: {fileID: 182903281121087285, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: pixPerUnit
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2146288962591872050, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: pixPerUnit
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 3521349840658636587, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
         type: 3}
       propertyPath: m_Name
@@ -498,6 +508,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4242086908576254630, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242086908576254630, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4242086908576254630, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009472275566191808, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: pixPerUnit
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009472275566191808, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540866710500736967, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: pixPerUnit
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103009628617636436, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103009628617636436, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7103009628617636436, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8436313716319636117, guid: 1bbaff5b1d131408a9bd8dcc135098c3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -512,10 +567,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1435730768536147064, guid: c8734cf71672b49bfb48263c353caecd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.39
+      objectReference: {fileID: 0}
     - target: {fileID: 2893269737708694226, guid: c8734cf71672b49bfb48263c353caecd,
         type: 3}
       propertyPath: m_Name
       value: Cameras
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419317576542125088, guid: c8734cf71672b49bfb48263c353caecd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419317576542125276, guid: c8734cf71672b49bfb48263c353caecd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.91
       objectReference: {fileID: 0}
     - target: {fileID: 6430469196636003496, guid: c8734cf71672b49bfb48263c353caecd,
         type: 3}
@@ -571,6 +641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133752815458276991, guid: c8734cf71672b49bfb48263c353caecd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8734cf71672b49bfb48263c353caecd, type: 3}
