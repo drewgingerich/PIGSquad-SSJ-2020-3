@@ -12,6 +12,32 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2636283985086742964, guid: fe79e7c6ba8bf41cbbfff316f4e8cecf,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92a1d91129b90409cbc98325682240ca,
+        type: 3}
+    - target: {fileID: 2636283985086742964, guid: fe79e7c6ba8bf41cbbfff316f4e8cecf,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636283985086742964, guid: fe79e7c6ba8bf41cbbfff316f4e8cecf,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636283985086742964, guid: fe79e7c6ba8bf41cbbfff316f4e8cecf,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2636283985086742964, guid: fe79e7c6ba8bf41cbbfff316f4e8cecf,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 2636283985086742965, guid: fe79e7c6ba8bf41cbbfff316f4e8cecf,
         type: 3}
       propertyPath: m_Name
