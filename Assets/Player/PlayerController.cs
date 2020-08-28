@@ -2,14 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerController : MonoBehaviour
 {
-	private PlayerInput input;
-	private Vector2 mousePosition = Vector2.zero;
-	private bool interact = false;
-	private bool turn = false;
+	public PlayableDirector fadeToRoom;
+	public PlayableDirector fadeToMirror;
+
+	PlayerInput input;
+	Vector2 mousePosition = Vector2.zero;
+	bool interact = false;
+	bool facingRoom = true;
+	bool turning = false;
 
 	public void OnAim(InputAction.CallbackContext ctx)
 	{
@@ -33,6 +38,23 @@ public class PlayerController : MonoBehaviour
 
 	public void OnTurn(InputAction.CallbackContext ctx)
 	{
-		turn = true;
+		if (turning) return;
+		StartCoroutine(TurnRoutine());
+	}
+
+	IEnumerator TurnRoutine()
+	{
+		turning = true;
+		if (facingRoom)
+		{
+			fadeToMirror.Play();
+		}
+		else
+		{
+			fadeToRoom.Play();
+		}
+		facingRoom = !facingRoom;
+		yield return new WaitForSeconds(0.2f);
+		turning = false;
 	}
 }
