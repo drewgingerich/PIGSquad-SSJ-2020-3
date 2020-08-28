@@ -23,8 +23,7 @@ class TransparencySortGraphicsHelper
 		GraphicsSettings.transparencySortMode = TransparencySortMode.CustomAxis;
 		GraphicsSettings.transparencySortAxis = new Vector3(0, 0, 1f);
 		// GraphicsSettings.transparencySortMode = TransparencySortMode.Orthographic;
-		Debug.Log(GraphicsSettings.transparencySortMode);
-		Debug.Log(GraphicsSettings.transparencySortAxis);
-		// Debug.Log("Graphics settings: transparency sort mode set to use Z-axis");
+		// Debug.Log(GraphicsSettings.transparencySortMode);
+		// Debug.Log(GraphicsSettings.transparencySortAxis);
 	}
 }
