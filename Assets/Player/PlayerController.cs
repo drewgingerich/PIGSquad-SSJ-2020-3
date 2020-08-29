@@ -26,8 +26,9 @@ public class PlayerController : MonoBehaviour
 		if (ctx.phase != InputActionPhase.Performed) return;
 
 		var ray = Camera.main.ScreenPointToRay(mousePosition);
-		var hit = Physics2D.GetRayIntersection(ray);
-		Debug.Log(hit);
+		RaycastHit hit;
+		Physics.Raycast(ray, out hit);
+
 		if (hit.collider == null) return;
 
 		var interactable = hit.collider.gameObject.GetComponent<Interactable>();

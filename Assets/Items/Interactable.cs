@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-
-[System.Serializable]
-public class InteractEvent : UnityEvent<Vector2> { }
-
 public class Interactable : MonoBehaviour
 {
-	public InteractEvent OnInteract;
+	public event System.Action<Vector3> OnInteract;
 
-	public void HandleInteract(Vector2 interactionPoint)
+	public void HandleInteract(Vector3 interactionPoint)
 	{
-		OnInteract.Invoke(interactionPoint);
-		Debug.Log(interactionPoint);
+		Debug.Log(gameObject.name);
+		OnInteract?.Invoke(interactionPoint);
 	}
 }
