@@ -11,6 +11,7 @@ public class ItemPositionManager : MonoBehaviour
 		var positions = transform.GetComponentsInChildren(typeof(ItemPosition));
 		foreach (ItemPosition p in positions)
 		{
+			Debug.Log(p.gameObject.name);
 			p.OnSelect += HandleSelectItemPosition;
 		}
 	}
@@ -25,5 +26,6 @@ public class ItemPositionManager : MonoBehaviour
 		var selectedItem = selectedPosition.item;
 		selectedPosition.SetItem(position.item);
 		position.SetItem(selectedItem);
+		selectedPosition = null;
 	}
 }

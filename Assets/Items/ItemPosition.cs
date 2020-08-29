@@ -28,7 +28,6 @@ public class ItemPosition : MonoBehaviour
 
 	void HandleInteract(Vector3 _)
 	{
-		Debug.Log("Here");
 		OnSelect?.Invoke(this);
 	}
 
