@@ -7292,6 +7292,11 @@ PrefabInstance:
     - target: {fileID: 3993116897902977500, guid: c8734cf71672b49bfb48263c353caecd,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6419317576542125088, guid: c8734cf71672b49bfb48263c353caecd,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6430469196636003496, guid: c8734cf71672b49bfb48263c353caecd,
@@ -7423,6 +7428,31 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 44055328}
+    - target: {fileID: 5854710886315606522, guid: ffd695c4fcead4017bdf005eef499666,
+        type: 3}
+      propertyPath: itemPosition.x
+      value: -8.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854710886315606522, guid: ffd695c4fcead4017bdf005eef499666,
+        type: 3}
+      propertyPath: itemPosition.y
+      value: 14.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854710886315606522, guid: ffd695c4fcead4017bdf005eef499666,
+        type: 3}
+      propertyPath: sigilPosition.z
+      value: -34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854710886315606522, guid: ffd695c4fcead4017bdf005eef499666,
+        type: 3}
+      propertyPath: sigilPosition.y
+      value: 10.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854710886315606522, guid: ffd695c4fcead4017bdf005eef499666,
+        type: 3}
+      propertyPath: sigilPosition.x
+      value: -3.76
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd695c4fcead4017bdf005eef499666, type: 3}
 --- !u!4 &7261878927724063509 stripped

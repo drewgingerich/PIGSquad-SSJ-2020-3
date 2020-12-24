@@ -8,6 +8,9 @@ public class ItemPosition : MonoBehaviour
 
 	public Transform item;
 
+	public Vector3 itemPosition;
+	public Vector3 sigilPosition;
+
 	void Start()
 	{
 		if (item == null) return;
@@ -34,6 +37,8 @@ public class ItemPosition : MonoBehaviour
 	void OnDrawGizmosSelected()
 	{
 		Gizmos.color = Color.green;
-		Gizmos.DrawSphere(transform.position, 0.2f);
+		Gizmos.DrawSphere(itemPosition, 0.2f);
+		Gizmos.color = Color.red;
+		Gizmos.DrawSphere(sigilPosition, 0.2f);
 	}
 }
